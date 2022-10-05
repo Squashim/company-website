@@ -2,14 +2,27 @@ import React, { useEffect, useState } from "react";
 import { images } from "../../constants";
 import { motion } from "framer-motion";
 import "./Navbar.scss";
-import { Link } from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-const Navbar = () => {
+const Navbar = ({ active, setActive }) => {
 	const [navbar, setNavbar] = useState(false);
 	const [toggle, setToggle] = useState(false);
-	const [active, setActive] = useState("home");
+
+	const CustomLink = ({ to, children, ...props }) => {
+		const resolvedPath = useResolvedPath(to);
+		const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+
+		return (
+			<li>
+				<Link to={to} {...props} className={isActive ? "active" : ""}>
+					{children}
+					<div />
+				</Link>
+			</li>
+		);
+	};
 
 	const changeBackground = () => {
 		if (window.scrollY >= 66) {
@@ -17,10 +30,6 @@ const Navbar = () => {
 		} else {
 			setNavbar(false);
 		}
-	};
-	const changeToggle = (active) => {
-		setToggle(false);
-		setActive(active);
 	};
 	useEffect(() => {
 		changeBackground();
@@ -32,42 +41,10 @@ const Navbar = () => {
 				<img src={images.logo} alt='logo' />
 			</div>
 			<ul className='app__navbar-links'>
-				<li>
-					<Link
-						to='/'
-						className={active === "home" ? "active" : ""}
-						onClick={() => setActive("home")}>
-						Home
-					</Link>
-					<div />
-				</li>
-				<li>
-					<Link
-						to='/products'
-						className={active === "products" ? "active" : ""}
-						onClick={() => setActive("products")}>
-						Products
-					</Link>
-					<div />
-				</li>
-				<li>
-					<Link
-						to='/markets'
-						className={active === "markets" ? "active" : ""}
-						onClick={() => setActive("markets")}>
-						Markets
-					</Link>
-					<div />
-				</li>
-				<li>
-					<Link
-						to='/contact'
-						className={active === "contact" ? "active" : ""}
-						onClick={() => setActive("contact")}>
-						Contact
-					</Link>
-					<div />
-				</li>
+				<CustomLink to='/'>Home</CustomLink>
+				<CustomLink to='/products'>Products</CustomLink>
+				<CustomLink to='/markets'>Markets</CustomLink>
+				<CustomLink to='/contact'>Contact</CustomLink>
 			</ul>
 
 			<div className='app__navbar-menu'>
@@ -75,44 +52,25 @@ const Navbar = () => {
 
 				{toggle && (
 					<motion.div
+						className='container'
 						initial={{ width: 0 }}
 						animate={{
 							width: 300,
 						}}>
 						<AiOutlineClose onClick={() => setToggle(false)} />
 						<ul>
-							<li>
-								<Link
-									to='/'
-									className={active === "home" ? "active" : ""}
-									onClick={() => changeToggle("home")}>
-									Home
-								</Link>
-							</li>
-							<li>
-								<Link
-									to='/products'
-									className={active === "products" ? "active" : ""}
-									onClick={() => changeToggle("products")}>
-									Products
-								</Link>
-							</li>
-							<li>
-								<Link
-									to='/markets'
-									className={active === "markets" ? "active" : ""}
-									onClick={() => changeToggle("markets")}>
-									Markets
-								</Link>
-							</li>
-							<li>
-								<Link
-									to='/contact'
-									className={active === "contact" ? "active" : ""}
-									onClick={() => changeToggle("contact")}>
-									Contact
-								</Link>
-							</li>
+							<CustomLink onClick={() => setToggle(false)} to='/'>
+								Home
+							</CustomLink>
+							<CustomLink onClick={() => setToggle(false)} to='/products'>
+								Products
+							</CustomLink>
+							<CustomLink onClick={() => setToggle(false)} to='/markets'>
+								Markets
+							</CustomLink>
+							<CustomLink onClick={() => setToggle(false)} to='/contact'>
+								Contact
+							</CustomLink>
 						</ul>
 					</motion.div>
 				)}

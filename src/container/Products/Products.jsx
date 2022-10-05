@@ -1,8 +1,9 @@
 import React from "react";
 import "./Products.scss";
 import { images } from "../../constants";
+import { Link } from "react-router-dom";
 
-const Products = () => {
+const Products = ({ setActive }) => {
 	return (
 		<div className='app__products' id='products'>
 			<div className='divider'>
@@ -25,7 +26,9 @@ const Products = () => {
 							<img src={images.pasta} alt='pasta' />
 							<div className='product-overlay'></div>
 							<div className='product-details'>
-								<button>Zobacz więcej</button>
+								<Link to='/products' onClick={() => setActive("products")}>
+									<button>Zobacz więcej</button>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -35,7 +38,11 @@ const Products = () => {
 							<img src={images.salami} alt='salami' />
 							<div className='product-overlay'></div>
 							<div className='product-details'>
-								<button>Zobacz więcej</button>
+								<Link to='/products'>
+									<button onClick={() => setActive("products")}>
+										Zobacz więcej
+									</button>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -45,7 +52,11 @@ const Products = () => {
 							<img src={images.cheese} alt='cheese' />
 							<div className='product-overlay'></div>
 							<div className='product-details'>
-								<button>Zobacz więcej</button>
+								<Link to='/products'>
+									<button onClick={() => setActive("products")}>
+										Zobacz więcej
+									</button>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -55,7 +66,11 @@ const Products = () => {
 							<img src={images.olives} alt='olives' />
 							<div className='product-overlay'></div>
 							<div className='product-details'>
-								<button>Zobacz więcej</button>
+								<Link to='/products'>
+									<button onClick={() => setActive("products")}>
+										Zobacz więcej
+									</button>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -75,7 +90,11 @@ const Products = () => {
 							<img src={images.cannoli} alt='cannoli' />
 							<div className='product-overlay'></div>
 							<div className='product-details'>
-								<button>Zobacz więcej</button>
+								<Link to='/products'>
+									<button onClick={() => setActive("products")}>
+										Zobacz więcej
+									</button>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -90,7 +109,11 @@ const Products = () => {
 							<img src={images.amaretti} alt='amaretti' />
 							<div className='product-overlay'></div>
 							<div className='product-details'>
-								<button>Zobacz więcej</button>
+								<Link to='/products'>
+									<button onClick={() => setActive("products")}>
+										Zobacz więcej
+									</button>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -105,7 +128,11 @@ const Products = () => {
 								<img src={images.gelato} alt='gelato' />
 							</div>
 						</div>
-						<button>Zobacz więcej</button>
+						<Link to='/products'>
+							<button onClick={() => setActive("products")}>
+								Zobacz więcej
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>

@@ -45,12 +45,20 @@
 				text-decoration: none;
 				text-transform: uppercase;
 				transition: all 0.2s ease-in-out;
+				div {
+					position: absolute;
+					margin-top: 1.63rem;
+					width: 100%;
+					height: 4px;
+					background: transparent;
+					transition: all 0.2s ease-in-out;
+				}
 				&.active {
 					color: var(--primary-color);
-					& ~ div {
+					div {
 						background: var(--primary-color);
 					}
-					&:hover ~ div {
+					&:hover > div {
 						background: var(--text-dark);
 					}
 				}
@@ -60,15 +68,6 @@
 				@media screen and (min-width: 800px) {
 					font-size: 1rem;
 				}
-			}
-
-			div {
-				position: absolute;
-				margin-top: 1.63rem;
-				width: 100%;
-				height: 4px;
-				background: transparent;
-				transition: all 0.2s ease-in-out;
 			}
 
 			&:hover {
@@ -94,7 +93,7 @@
 			color: var(--white);
 			cursor: pointer;
 		}
-		div {
+		.container {
 			position: fixed;
 			top: 0;
 			bottom: 0;
