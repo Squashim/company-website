@@ -16,8 +16,7 @@ const Footer = () => {
 				</svg>
 			</div>
 			<p>
-				&#169; <span style={{ fontWeight: "700" }}>2022 ITAL-MAX</span> Wszelkie
-				prawa zastrzeżone
+				&#169; <span style={{ fontWeight: "700" }}>2022 ITAL-MAX</span>
 			</p>
 		</footer>
 	);

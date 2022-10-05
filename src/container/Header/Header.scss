@@ -1,6 +1,6 @@
 .app__header {
 	width: 100%;
-	min-height: 99.2vh;
+	min-height: 100vh;
 	position: relative;
 
 	&-bg {
@@ -19,6 +19,14 @@
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
+		@media screen and (max-width: 768px) {
+			background: rgba(0, 0, 0, 0.6) url("../../assets/header_bg-mobile.jpg");
+			background-size: cover;
+			background-position: center;
+
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
 	}
 	&-info {
 		width: 100%;
