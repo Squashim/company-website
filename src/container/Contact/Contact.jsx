@@ -7,6 +7,7 @@ import moment from "moment";
 const Contact = () => {
 	const [markets, setMarkets] = useState([]);
 	const today = new Date();
+	today.setDate(today.getDate() - 1);
 
 	useEffect(() => {
 		const query = '*[_type == "markets"][0...4] | order(_createdAt desc)';
@@ -18,17 +19,6 @@ const Contact = () => {
 
 	return (
 		<div className='app__contact' id='contact'>
-			<div className='divider'>
-				<svg
-					data-name='Layer 1'
-					xmlns='http://www.w3.org/2000/svg'
-					viewBox='0 0 1200 120'
-					preserveAspectRatio='none'>
-					<path
-						d='M1200 120L0 16.48 0 0 1200 0 1200 120z'
-						className='shape-fill'></path>
-				</svg>
-			</div>
 			<div className='app__contact-container'>
 				<div className='contact'>
 					<h2>Kontakt</h2>
@@ -45,7 +35,7 @@ const Contact = () => {
 					{markets.map((market, index) => (
 						<div
 							className={
-								today > Date.parse(market.date)
+								Date.parse(today) > Date.parse(market.date)
 									? "market-item finished"
 									: "market-item"
 							}

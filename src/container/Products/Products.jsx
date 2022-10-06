@@ -3,20 +3,9 @@ import "./Products.scss";
 import { images } from "../../constants";
 import { Link } from "react-router-dom";
 
-const Products = ({ setActive }) => {
+const Products = () => {
 	return (
 		<div className='app__products' id='products'>
-			<div className='divider'>
-				<svg
-					data-name='Layer 1'
-					xmlns='http://www.w3.org/2000/svg'
-					viewBox='0 0 1200 120'
-					preserveAspectRatio='none'>
-					<path
-						d='M1200 120L0 16.48 0 0 1200 0 1200 120z'
-						className='shape-fill'></path>
-				</svg>
-			</div>
 			<div className='column'>
 				<h2>Znajdziesz u nas najświeższe produkty</h2>
 				<div className='products-container'>
@@ -26,7 +15,7 @@ const Products = ({ setActive }) => {
 							<img src={images.pasta} alt='pasta' />
 							<div className='product-overlay'></div>
 							<div className='product-details'>
-								<Link to='/products' onClick={() => setActive("products")}>
+								<Link to='/products'>
 									<button>Zobacz więcej</button>
 								</Link>
 							</div>
@@ -39,9 +28,7 @@ const Products = ({ setActive }) => {
 							<div className='product-overlay'></div>
 							<div className='product-details'>
 								<Link to='/products'>
-									<button onClick={() => setActive("products")}>
-										Zobacz więcej
-									</button>
+									<button>Zobacz więcej</button>
 								</Link>
 							</div>
 						</div>
@@ -53,9 +40,7 @@ const Products = ({ setActive }) => {
 							<div className='product-overlay'></div>
 							<div className='product-details'>
 								<Link to='/products'>
-									<button onClick={() => setActive("products")}>
-										Zobacz więcej
-									</button>
+									<button>Zobacz więcej</button>
 								</Link>
 							</div>
 						</div>
@@ -67,9 +52,7 @@ const Products = ({ setActive }) => {
 							<div className='product-overlay'></div>
 							<div className='product-details'>
 								<Link to='/products'>
-									<button onClick={() => setActive("products")}>
-										Zobacz więcej
-									</button>
+									<button>Zobacz więcej</button>
 								</Link>
 							</div>
 						</div>
@@ -91,9 +74,7 @@ const Products = ({ setActive }) => {
 							<div className='product-overlay'></div>
 							<div className='product-details'>
 								<Link to='/products'>
-									<button onClick={() => setActive("products")}>
-										Zobacz więcej
-									</button>
+									<button>Zobacz więcej</button>
 								</Link>
 							</div>
 						</div>
@@ -110,9 +91,7 @@ const Products = ({ setActive }) => {
 							<div className='product-overlay'></div>
 							<div className='product-details'>
 								<Link to='/products'>
-									<button onClick={() => setActive("products")}>
-										Zobacz więcej
-									</button>
+									<button>Zobacz więcej</button>
 								</Link>
 							</div>
 						</div>
@@ -129,9 +108,7 @@ const Products = ({ setActive }) => {
 							</div>
 						</div>
 						<Link to='/products'>
-							<button onClick={() => setActive("products")}>
-								Zobacz więcej
-							</button>
+							<button>Zobacz więcej</button>
 						</Link>
 					</div>
 				</div>

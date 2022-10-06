@@ -2,27 +2,6 @@
 	width: 100%;
 	background: var(--primary-color);
 	position: relative;
-
-	.divider {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		overflow: hidden;
-		line-height: 0;
-	}
-
-	.divider svg {
-		position: relative;
-		display: block;
-		width: calc(100% + 1.3px);
-		height: 39px;
-		transform: rotateY(180deg);
-	}
-
-	.divider .shape-fill {
-		fill: var(--text-dark);
-	}
 	&-container {
 		max-width: 1280px;
 		margin: 0 auto;
@@ -90,9 +69,6 @@
 
 					.market-day {
 						text-align: left;
-					}
-					.market-time {
-						text-align: center;
 					}
 				}
 				h3 {
