@@ -42,9 +42,9 @@ const Navbar = () => {
 			</div>
 			<ul className='app__navbar-links'>
 				<CustomLink to='/'>Home</CustomLink>
-				<CustomLink to='/products'>Products</CustomLink>
-				<CustomLink to='/markets'>Markets</CustomLink>
-				<CustomLink to='/contact'>Contact</CustomLink>
+				<CustomLink to='/products'>Produkty</CustomLink>
+				<CustomLink to='/markets'>Rynki</CustomLink>
+				<CustomLink to='/contact'>Kontakt</CustomLink>
 			</ul>
 
 			<div className='app__navbar-menu'>
@@ -63,13 +63,13 @@ const Navbar = () => {
 								Home
 							</CustomLink>
 							<CustomLink onClick={() => setToggle(false)} to='/products'>
-								Products
+								Produkty
 							</CustomLink>
 							<CustomLink onClick={() => setToggle(false)} to='/markets'>
-								Markets
+								Rynki
 							</CustomLink>
 							<CustomLink onClick={() => setToggle(false)} to='/contact'>
-								Contact
+								Kontakt
 							</CustomLink>
 						</ul>
 					</motion.div>
