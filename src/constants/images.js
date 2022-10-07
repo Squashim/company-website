@@ -6,6 +6,7 @@ import olives from "../assets/olives.webp";
 import salami from "../assets/salami.webp";
 import pasta from "../assets/pasta.webp";
 import cheese from "../assets/ser.webp";
+import shop from "../assets/sklep.webp";
 
 const images = {
 	logo,
@@ -15,6 +16,7 @@ const images = {
 	olives,
 	salami,
 	pasta,
+	shop,
 	cheese,
 };
 

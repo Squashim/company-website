@@ -41,9 +41,9 @@ const Navbar = () => {
 				<img src={images.logo} alt='logo' />
 			</div>
 			<ul className='app__navbar-links'>
-				<CustomLink to='/'>Home</CustomLink>
-				<CustomLink to='/products'>Produkty</CustomLink>
-				<CustomLink to='/markets'>Rynki</CustomLink>
+				<CustomLink to='/'>Heim</CustomLink>
+				<CustomLink to='/products'>Produkte</CustomLink>
+				<CustomLink to='/markets'>Märkte</CustomLink>
 				<CustomLink to='/contact'>Kontakt</CustomLink>
 			</ul>
 
@@ -60,13 +60,13 @@ const Navbar = () => {
 						<AiOutlineClose onClick={() => setToggle(false)} />
 						<ul>
 							<CustomLink onClick={() => setToggle(false)} to='/'>
-								Home
+								Heim
 							</CustomLink>
 							<CustomLink onClick={() => setToggle(false)} to='/products'>
-								Produkty
+								Produkte
 							</CustomLink>
 							<CustomLink onClick={() => setToggle(false)} to='/markets'>
-								Rynki
+								Märkte
 							</CustomLink>
 							<CustomLink onClick={() => setToggle(false)} to='/contact'>
 								Kontakt

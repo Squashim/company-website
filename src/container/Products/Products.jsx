@@ -7,52 +7,52 @@ const Products = () => {
 	return (
 		<div className='app__products' id='products'>
 			<div className='column'>
-				<h2>Znajdziesz u nas najświeższe produkty</h2>
+				<h2>Bei uns finden Sie die frischesten Produkte</h2>
 				<div className='products-container'>
 					<div className='product-wrapper'>
-						<h3>Makarony</h3>
+						<h3>Pasta</h3>
 						<div className='product'>
 							<img src={images.pasta} alt='pasta' />
 							<div className='product-overlay'></div>
 							<div className='product-details'>
 								<Link to='/products'>
-									<button>Zobacz więcej</button>
+									<button>Mehr sehen</button>
 								</Link>
 							</div>
 						</div>
 					</div>
 					<div className='product-wrapper'>
-						<h3>Mięso</h3>
+						<h3>Fleischprodukte</h3>
 						<div className='product'>
 							<img src={images.salami} alt='salami' />
 							<div className='product-overlay'></div>
 							<div className='product-details'>
 								<Link to='/products'>
-									<button>Zobacz więcej</button>
+									<button>Mehr sehen</button>
 								</Link>
 							</div>
 						</div>
 					</div>
 					<div className='product-wrapper'>
-						<h3>Sery</h3>
+						<h3>Käse</h3>
 						<div className='product'>
 							<img src={images.cheese} alt='cheese' />
 							<div className='product-overlay'></div>
 							<div className='product-details'>
 								<Link to='/products'>
-									<button>Zobacz więcej</button>
+									<button>Mehr sehen</button>
 								</Link>
 							</div>
 						</div>
 					</div>
 					<div className='product-wrapper'>
-						<h3>Oliwki</h3>
+						<h3>Oliven</h3>
 						<div className='product'>
 							<img src={images.olives} alt='olives' />
 							<div className='product-overlay'></div>
 							<div className='product-details'>
 								<Link to='/products'>
-									<button>Zobacz więcej</button>
+									<button>Mehr sehen</button>
 								</Link>
 							</div>
 						</div>
@@ -61,7 +61,7 @@ const Products = () => {
 			</div>
 
 			<div className='column dark'>
-				<h2>Na deser</h2>
+				<h2>Süßigkeiten zum Nachtisch</h2>
 				<div className='products-container'>
 					<div className='product-wrapper'>
 						<h3>Cannoli</h3>
@@ -74,7 +74,7 @@ const Products = () => {
 							<div className='product-overlay'></div>
 							<div className='product-details'>
 								<Link to='/products'>
-									<button>Zobacz więcej</button>
+									<button>Mehr sehen</button>
 								</Link>
 							</div>
 						</div>
@@ -91,13 +91,13 @@ const Products = () => {
 							<div className='product-overlay'></div>
 							<div className='product-details'>
 								<Link to='/products'>
-									<button>Zobacz więcej</button>
+									<button>Mehr sehen</button>
 								</Link>
 							</div>
 						</div>
 					</div>
 					<div className='span-2'>
-						<h3>Lody</h3>
+						<h3>Gelato</h3>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam at
 							quam quas mollitia accusantium ipsum.
@@ -108,7 +108,7 @@ const Products = () => {
 							</div>
 						</div>
 						<Link to='/products'>
-							<button>Zobacz więcej</button>
+							<button>Mehr sehen</button>
 						</Link>
 					</div>
 				</div>

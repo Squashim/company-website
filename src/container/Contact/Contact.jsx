@@ -3,6 +3,9 @@ import { useEffect } from "react";
 import "./Contact.scss";
 import { client } from "../../client";
 import moment from "moment";
+import { images } from "../../constants";
+import { Link } from "react-router-dom";
+import "moment/locale/de";
 
 const Contact = () => {
 	const [markets, setMarkets] = useState([]);
@@ -23,30 +26,37 @@ const Contact = () => {
 				<div className='contact'>
 					<h2>Kontakt</h2>
 					<div className='wrapper'>
-						<p>Tel 123456789</p>
-						<p>email: email@com</p>
-						<p>Adres asdawd</p>
-						<p>dasdawnda</p>
-						<p>owkdoaow</p>
+						<p>Telefonnummer: 123 456 789</p>
+						<p>E-mail: ital@max.de</p>
 					</div>
+					<Link to='/contact'>
+						<button>Mehr sehen</button>
+					</Link>
+				</div>
+				<div className='shop'>
+					<h2>Unser Geschäft</h2>
+					<Link to='/contact'>
+						<img src={images.shop} alt='shop' />
+					</Link>
 				</div>
 				<div className='markets'>
-					<h2>Aktualne rynki</h2>
+					<h2>Aktuelle Märkte</h2>
 					{markets.map((market, index) => (
-						<div
-							className={
-								Date.parse(today) > Date.parse(market.date)
-									? "market-item finished"
-									: "market-item"
-							}
-							key={index}>
-							<h3>{market.place}</h3>
-							<div className='market-details'>
-								<p className='market-day'>
-									{moment(market.date).format("dddd, DD.MM")}
-								</p>
+						<Link to='/markets' key={index}>
+							<div
+								className={
+									Date.parse(today) > Date.parse(market.date)
+										? "market-item finished"
+										: "market-item"
+								}>
+								<h3>{market.place}</h3>
+								<div className='market-details'>
+									<p className='market-day'>
+										{moment(market.date).locale("de").format("dddd, DD.MM")}
+									</p>
+								</div>
 							</div>
-						</div>
+						</Link>
 					))}
 				</div>
 			</div>
