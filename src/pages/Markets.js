@@ -9,10 +9,11 @@ const Markets = () => {
 	const today = new Date();
 	today.setDate(today.getDate() - 1);
 	useEffect(() => {
-		const query = '*[_type == "markets"] | order(_createdAt desc)';
+		const query = '*[_type == "markets"] | order(_updatedAt asc)';
 
 		client.fetch(query).then((data) => {
 			setMarkets(data);
+			console.log(data);
 		});
 	}, []);
 	return (
