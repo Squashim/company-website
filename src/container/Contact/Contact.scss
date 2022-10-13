@@ -91,6 +91,7 @@
 				transition: all 0.5s ease;
 				&.finished {
 					text-decoration: line-through;
+					opacity: 0.7;
 				}
 				@media screen and (min-width: 768px) {
 					padding: 0.5rem 1rem;

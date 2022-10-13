@@ -13,7 +13,6 @@ const Markets = () => {
 
 		client.fetch(query).then((data) => {
 			setMarkets(data);
-			console.log(data);
 		});
 	}, []);
 	return (

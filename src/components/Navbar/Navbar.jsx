@@ -25,7 +25,7 @@ const Navbar = () => {
 	};
 
 	const changeBackground = () => {
-		if (window.scrollY >= 66) {
+		if (window.scrollY >= 40) {
 			setNavbar(true);
 		} else {
 			setNavbar(false);
